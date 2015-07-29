@@ -2,7 +2,7 @@
 Summary:	Taskbar plugin which mimicks the Windows 7 taskbar (pinning applications, etc)
 Name:		xfce4-taskbar-plugin
 Version:	0.%{snap}
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications
 Source0:	%{name}-%{snap}.tar.bz2
