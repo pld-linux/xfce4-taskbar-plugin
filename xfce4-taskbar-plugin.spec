@@ -2,12 +2,13 @@
 Summary:	Taskbar plugin which mimicks the Windows 7 taskbar (pinning applications, etc)
 Name:		xfce4-taskbar-plugin
 Version:	0.%{snap}
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		X11/Applications
 Source0:	%{name}-%{snap}.tar.bz2
 # Source0-md5:	259533052a8398e50496052699b75787
 Patch0:		make.patch
+Patch1:		dbus-glib.patch
 URL:		http://git.xfce.org/panel-plugins/xfce4-taskbar-plugin/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -26,6 +27,7 @@ Taskbar plugin which mimicks the Windows 7 taskbar
 %prep
 %setup -q -n %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} OPT="%{rpmcflags}"

@@ -1,0 +1,12 @@
+--- xfce4-taskbar-plugin/Makefile.orig	2018-06-10 21:22:12.000000000 +0000
++++ xfce4-taskbar-plugin/Makefile	2018-06-10 21:24:42.834892502 +0000
+@@ -1,7 +1,7 @@
+ PP=-DPACKAGE_NAME="\"Taskbar\"" -DLC_MESSAGES="\"C\"" -DHELPDIR="\"/usr/share/doc/xfce4-taskbar/\""
+-CFLAGS=-fPIC $(PP) $(OPT) -I. `pkg-config --cflags-only-I gtk+-2.0 exo-1 libwnck-1.0 libxfce4panel-1.0 libxfce4ui-1 libxfconf-0 gtkhotkey-1.0`
++CFLAGS=-fPIC $(PP) $(OPT) -I. `pkg-config --cflags-only-I dbus-glib-1 gtk+-2.0 exo-1 libwnck-1.0 libxfce4panel-1.0 libxfce4ui-1 libxfconf-0 gtkhotkey-1.0`
+ #CFLAGS=-fPIC $(PP) -O3 -I. `pkg-config --cflags-only-I gtk+-2.0 exo-1 libwnck-1.0 libxfce4panel-1.0 libxfce4ui-1 libxfconf-0 gtkhotkey-1.0`
+-LINKFLAGS=`pkg-config --libs gtk+-2.0 exo-1 libwnck-1.0 libxfce4panel-1.0 libxfce4ui-1 libxfconf-0 gobject-2.0 gtk+-x11-2.0 glib-2.0 gtkhotkey-1.0`
++LINKFLAGS=`pkg-config --libs dbus-glib-1 gtk+-2.0 exo-1 libwnck-1.0 libxfce4panel-1.0 libxfce4ui-1 libxfconf-0 gobject-2.0 gtk+-x11-2.0 glib-2.0 gtkhotkey-1.0`
+ 
+ OBJ=taskbar.o taskbar-widget.o hotkeys.o panel-debug.o panel-utils.o panel-xfconf.o
+ 
